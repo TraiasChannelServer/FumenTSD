@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FumenTSD.UserControls"
              mc:Ignorable="d" Height="Auto" Width="37"
-			 x:Name="root">
+			 x:Name="root" >
 	<Grid Background="#FF373737">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="6"/>

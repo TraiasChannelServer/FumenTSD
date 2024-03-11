@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using FumenTSD.Windows;
+using System.Windows;
 
 namespace FumenTSD
 {
@@ -10,6 +11,11 @@ namespace FumenTSD
 		public MainWindow()
 		{
 			InitializeComponent();
+		}
+
+		private void BtnFieldEdit_Click(object sender, RoutedEventArgs e)
+		{
+			(new EditField()).ShowDialog();
 		}
 	}
 }

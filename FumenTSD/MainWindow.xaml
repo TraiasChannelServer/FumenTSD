@@ -5,43 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FumenTSD.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="569"  Width="532" ResizeMode="NoResize">
-	<Grid Margin="0,0,0,0">
-		<GroupBox Header="基本情報" Margin="10,10,266,0" Height="222" VerticalAlignment="Top">
-			<Grid>
-				<Label Content="タイトル（メニュー）" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-				<TextBox Margin="113,14,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-				<Label Content="タイトル（ゲーム中）" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
-				<TextBox Margin="113,40,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        Title="FumenTSD Maker" Height="541"  Width="532" ResizeMode="NoResize">
+	<StackPanel Margin="0,0,0,0" Height="Auto">
+		<UniformGrid Margin="10,5,10,0" Columns="2" >
+			<GroupBox Header="基本情報"  Height="222" VerticalAlignment="Top" Margin="0,0,10,0">
+				<Grid>
+					<Label Content="タイトル（メニュー）" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+					<TextBox Margin="113,14,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+					<Label Content="タイトル（ゲーム中）" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+					<TextBox Margin="113,40,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
 
-				<Label Content="開発者" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
-				<TextBox Margin="113,67,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-				<Label Content="難易度" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Height="26"/>
-				<ComboBox SelectedIndex="0" Margin="113,94,11,0" Height="21" VerticalAlignment="Top">
-					<ComboBoxItem Content="1（簡単）"/>
-					<ComboBoxItem Content="2"/>
-					<ComboBoxItem Content="3"/>
-					<ComboBoxItem Content="4"/>
-					<ComboBoxItem Content="5（難しい）"/>
-				</ComboBox>
-				<Label Content="難易度" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Height="26"/>
-				<TextBox Margin="10,143,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="52"/>
-				<Label Content="コメント" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
-			</Grid>
+					<Label Content="開発者" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
+					<TextBox Margin="113,67,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+					<Label Content="難易度" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Height="26"/>
+					<ComboBox SelectedIndex="0" Margin="113,94,11,0" Height="21" VerticalAlignment="Top">
+						<ComboBoxItem Content="1（簡単）"/>
+						<ComboBoxItem Content="2"/>
+						<ComboBoxItem Content="3"/>
+						<ComboBoxItem Content="4"/>
+						<ComboBoxItem Content="5（難しい）"/>
+					</ComboBox>
+					<Label Content="難易度" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Height="26"/>
+					<TextBox Margin="10,143,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="52"/>
+					<Label Content="コメント" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
+				</Grid>
+			</GroupBox>
+			<GroupBox Header="クリア条件"  Height="222" VerticalAlignment="Top">
+				<Grid>
+					<TextBlock HorizontalAlignment="Left" Margin="10,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="TSpin Mini Single"></TextBlock>
+					<TextBlock HorizontalAlignment="Left" Margin="10,28,0,0" TextWrapping="Wrap" Text="TSpin Mini Double" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,49,0,0" TextWrapping="Wrap" Text="TSpin Single" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="TSpin Double" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="TSpin Triple" VerticalAlignment="Center"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,113,0,0" TextWrapping="Wrap" Text="Tetris" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,134,0,0" TextWrapping="Wrap" Text="Perfect Clear" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="9,155,0,0" TextWrapping="Wrap" Text="REN" VerticalAlignment="Top"/>
+					<TextBox HorizontalAlignment="Left" Margin="166,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox HorizontalAlignment="Left" Margin="166,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox HorizontalAlignment="Left" Margin="166,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox HorizontalAlignment="Left" Margin="166,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox HorizontalAlignment="Left" Margin="166,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="68"/>
+					<TextBox HorizontalAlignment="Left" Margin="166,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox HorizontalAlignment="Left" Margin="166,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox HorizontalAlignment="Left" Margin="166,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+				</Grid>
+			</GroupBox>
+		</UniformGrid>
+
+		<GroupBox Header="フィールド情報" VerticalAlignment="Top" Margin="10,0,10,0">
+			<StackPanel>
+				<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+					<local:Field />
+					<local:Field />
+				</StackPanel>
+
+				<Button x:Name="BtnFieldEdit" Content="編集" Height="20" Margin="0,10,5,5" Click="BtnFieldEdit_Click"/>
+			</StackPanel>
 		</GroupBox>
-		<GroupBox Header="クリア条件" Margin="271,10,10,0" Height="222" VerticalAlignment="Top"/>
-		<GroupBox Header="フィールド情報" Margin="10,237,10,0" Height="235" VerticalAlignment="Top">
-			<Grid>
-				<Button Content="編集" Margin="0,0,10,10" HorizontalAlignment="Right" Width="53" Height="20" VerticalAlignment="Bottom"/>
+		<UniformGrid Columns="2">
+			<Button Content="読み込み"  VerticalAlignment="Top" Height="36" Margin="10,10,10,0"/>
+			<Button Content="出力"  VerticalAlignment="Top" Height="36" Margin="10,10,10,10"/>
+		</UniformGrid>
 
-				<TextBlock Text="盤面" HorizontalAlignment="Left" Margin="61,26,0,0" VerticalAlignment="Top" Height="13" Width="122" Background="#FF373737" Foreground="White" FontSize="9" TextAlignment="Center" />
-				<TextBlock Text="盤面" HorizontalAlignment="Left" Margin="315,23,0,0" VerticalAlignment="Top" Height="13" Width="122" Background="#FF373737" Foreground="White" FontSize="9" TextAlignment="Center" />
-
-				<local:Field Margin="0,44,250,34"/>
-				<local:Field Margin="250,44,-2,34"/>
-			</Grid>
-		</GroupBox>
-		<Button Content="出力" Margin="10,477,10,0" VerticalAlignment="Top" Height="36"/>
-
-	</Grid>
+	</StackPanel>
 </Window>

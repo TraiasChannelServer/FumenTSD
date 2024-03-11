@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:FumenTSD.Windows"
         xmlns:UserControls="clr-namespace:FumenTSD.UserControls" x:Class="FumenTSD.Windows.EditField"
         mc:Ignorable="d"
-        Title="EditField" Height="321" Width="560" ResizeMode="NoResize">
+        Title="FieldEdit" Height="360" Width="560" ResizeMode="NoResize">
 	<StackPanel >
-		<GroupBox Header="パネル" Margin="0,0,10,10" Height="114">
+		<GroupBox Header="パネル" Margin="10,0,10,10" Height="114">
 			<Grid>
 				<UniformGrid Columns="3" Margin="0,0,247,0" Height="36" VerticalAlignment="Top">
 					<RadioButton Content="盤面" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
@@ -16,7 +16,10 @@
 					<RadioButton Content="ホールド" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
 				</UniformGrid>
 				<UniformGrid Margin="0,46,0,0" Height="45" VerticalAlignment="Top">
-					<Button></Button>
+					<UniformGrid.Background>
+						<ImageBrush/>
+					</UniformGrid.Background>
+					<Button x:Name="test"></Button>
 				</UniformGrid>
 			</Grid>
 		</GroupBox>

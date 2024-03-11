@@ -42,13 +42,7 @@ namespace FumenTSD.UserControls
 		public void AddMino()
 		{
 			Image image = new Image();
-			using (Stream stream = new MemoryStream())
-			{
-				var bitmap = CreateCustomBitmap();
-				bitmap.Save(stream, ImageFormat.Png);
-				stream.Seek(0, SeekOrigin.Begin);
-				image.Source = BitmapFrame.Create(stream, BitmapCreateOptions.None, BitmapCacheOption.OnLoad);
-			}
+			image.Source = Util.CreateMinoBitmapFrame(0);
 
 			image.Height = 20;
 			MinoContainer.Children.Add(image);
