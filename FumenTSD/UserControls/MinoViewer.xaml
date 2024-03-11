@@ -4,20 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FumenTSD.UserControls"
-             mc:Ignorable="d" Height="25" Width="37"
-			 x:Name="root"> 
+             mc:Ignorable="d" Height="Auto" Width="37"
+			 x:Name="root">
 	<Grid Background="#FF373737">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="0*"/>
-			<ColumnDefinition/>
-		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="6"/>
-			<RowDefinition/>
+			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
-		<TextBlock x:Name="Title" TextWrapping="Wrap" Text="Name" Foreground="White" FontSize="5" TextAlignment="Center" Height="6" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1"/>
-		<UniformGrid Grid.Row="1" Rows="1" Grid.ColumnSpan="2">
-			<Image ></Image>
+		<TextBlock x:Name="Title" TextWrapping="Wrap" Text="Name" Foreground="White" FontSize="5" TextAlignment="Center" Height="6" VerticalAlignment="Center" HorizontalAlignment="Center" />
+		<UniformGrid  x:Name="MinoContainer" 
+		Grid.Row="1" Rows="1">
+			
 		</UniformGrid>
 	</Grid>
 </UserControl>

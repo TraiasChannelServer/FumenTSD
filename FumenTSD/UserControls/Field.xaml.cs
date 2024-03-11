@@ -30,7 +30,7 @@ namespace FumenTSD.UserControls
 			InitializeBoard();
 		}
 
-		public void InitializeBoard()
+		private void InitializeBoard()
 		{
 			var fieldParent = FieldParent;
 

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FumenTSD.UserControls"
-             mc:Ignorable="d" Height="134" Width="252"  x:Name="root">
+             mc:Ignorable="d" Height="154" Width="252"  x:Name="root">
 	<UserControl.Resources>
 		<Style x:Key="BlockEmpty" TargetType="Button">
 			<Setter Property="Background" Value="White"/>
@@ -32,9 +32,10 @@
 		</Style>
 	</UserControl.Resources>
 	<Grid>
-		<local:MinoViewer x:Name="Hold" Width="37" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></local:MinoViewer>
-		<local:MinoViewer x:Name="Next" Width="37" Margin="207,11,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="24"></local:MinoViewer>
-		<Grid  Margin="52,10,0,0" Width="150" Height="120" VerticalAlignment="Top" HorizontalAlignment="Left">
+		<TextBlock x:Name="Name" Text="Name" HorizontalAlignment="Center" VerticalAlignment="Top" Height="13" Width="150" Background="#FF373737" Foreground="White" FontSize="9" TextAlignment="Center" />
+		<local:MinoViewer x:Name="Hold" Width="37" Height="25" Margin="10,17,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"></local:MinoViewer>
+		<local:MinoViewer x:Name="Next" Width="37" Margin="206,17,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="24"></local:MinoViewer>
+		<Grid Width="150" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center">
 			<UniformGrid x:Name="FieldParent" Rows="8">
 				<UniformGrid Rows="1" Background="#FF0010FF" >
 					<Button  Style="{StaticResource BlockEmpty}"></Button>
@@ -135,5 +136,6 @@
 			</UniformGrid>
 
 		</Grid>
+
 	</Grid>
 </UserControl>

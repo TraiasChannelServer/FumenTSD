@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FumenTSD.Windows"
+        xmlns:UserControls="clr-namespace:FumenTSD.UserControls" x:Class="FumenTSD.Windows.EditField"
+        mc:Ignorable="d"
+        Title="EditField" Height="321" Width="560" ResizeMode="NoResize">
+	<StackPanel >
+		<GroupBox Header="パネル" Margin="0,0,10,10" Height="114">
+			<Grid>
+				<UniformGrid Columns="3" Margin="0,0,247,0" Height="36" VerticalAlignment="Top">
+					<RadioButton Content="盤面" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+					<RadioButton Content="ネクスト" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+					<RadioButton Content="ホールド" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+				</UniformGrid>
+				<UniformGrid Margin="0,46,0,0" Height="45" VerticalAlignment="Top">
+					<Button></Button>
+				</UniformGrid>
+			</Grid>
+		</GroupBox>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<UserControls:Field x:Name="Field"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="252"/>
+			<UserControls:Field x:Name="FieldHint" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+
+		</StackPanel>
+
+		<Button Content="適用"   VerticalAlignment="Top" Height="32" Margin="10,0,10,0"/>
+
+	</StackPanel>
+</Window>
