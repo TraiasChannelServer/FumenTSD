@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FumenTSD.UserControls"
         mc:Ignorable="d"
-        Title="FumenTSD Maker" Height="541"  Width="532" ResizeMode="NoResize">
+        Title="FumenTSD Maker" Height="530"  Width="553" ResizeMode="NoResize">
 	<StackPanel Margin="0,0,0,0" Height="Auto">
 		<UniformGrid Margin="10,5,10,0" Columns="2" >
 			<GroupBox Header="基本情報"  Height="222" VerticalAlignment="Top" Margin="0,0,10,0">
 				<Grid>
 					<Label Content="タイトル（メニュー）" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-					<TextBox Margin="113,14,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+					<TextBox x:Name="TxtboxMenuTitle" Margin="113,14,11,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top"/>
 					<Label Content="タイトル（ゲーム中）" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
-					<TextBox Margin="113,40,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+					<TextBox x:Name="TxtboxInGameTitle" Margin="113,40,11,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top"/>
 
 					<Label Content="開発者" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
-					<TextBox Margin="113,67,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+					<TextBox x:Name="TxtboxDeveloper" Margin="113,67,11,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top"/>
 					<Label Content="難易度" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Height="26"/>
-					<ComboBox SelectedIndex="0" Margin="113,94,11,0" Height="21" VerticalAlignment="Top">
+					<ComboBox x:Name="ComboboxDifficulty" SelectedIndex="0" Margin="113,94,11,0" Height="21" VerticalAlignment="Top">
 						<ComboBoxItem Content="1（簡単）"/>
 						<ComboBoxItem Content="2"/>
 						<ComboBoxItem Content="3"/>
@@ -26,45 +26,45 @@
 						<ComboBoxItem Content="5（難しい）"/>
 					</ComboBox>
 					<Label Content="難易度" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Height="26"/>
-					<TextBox Margin="10,143,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="52"/>
+					<TextBox x:Name="TxtboxComment" Margin="10,143,11,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="52"/>
 					<Label Content="コメント" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
 				</Grid>
 			</GroupBox>
 			<GroupBox Header="クリア条件"  Height="222" VerticalAlignment="Top">
 				<Grid>
-					<TextBlock HorizontalAlignment="Left" Margin="10,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="TSpin Mini Single"></TextBlock>
-					<TextBlock HorizontalAlignment="Left" Margin="10,28,0,0" TextWrapping="Wrap" Text="TSpin Mini Double" VerticalAlignment="Top"/>
-					<TextBlock HorizontalAlignment="Left" Margin="10,49,0,0" TextWrapping="Wrap" Text="TSpin Single" VerticalAlignment="Top"/>
-					<TextBlock HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="TSpin Double" VerticalAlignment="Top"/>
-					<TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="TSpin Triple" VerticalAlignment="Center"/>
-					<TextBlock HorizontalAlignment="Left" Margin="10,113,0,0" TextWrapping="Wrap" Text="Tetris" VerticalAlignment="Top"/>
-					<TextBlock HorizontalAlignment="Left" Margin="10,134,0,0" TextWrapping="Wrap" Text="Perfect Clear" VerticalAlignment="Top"/>
-					<TextBlock HorizontalAlignment="Left" Margin="9,155,0,0" TextWrapping="Wrap" Text="REN" VerticalAlignment="Top"/>
-					<TextBox HorizontalAlignment="Left" Margin="166,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
-					<TextBox HorizontalAlignment="Left" Margin="166,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
-					<TextBox HorizontalAlignment="Left" Margin="166,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
-					<TextBox HorizontalAlignment="Left" Margin="166,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
-					<TextBox HorizontalAlignment="Left" Margin="166,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="68"/>
-					<TextBox HorizontalAlignment="Left" Margin="166,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
-					<TextBox HorizontalAlignment="Left" Margin="166,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
-					<TextBox HorizontalAlignment="Left" Margin="166,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,7,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Text="TSpin Mini Single"></TextBlock>
+					<TextBlock HorizontalAlignment="Left" Margin="10,28,0,0" TextWrapping="NoWrap" Text="TSpin Mini Double" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,49,0,0" TextWrapping="NoWrap" Text="TSpin Single" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="NoWrap" Text="TSpin Double" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="NoWrap" Text="TSpin Triple" VerticalAlignment="Center"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,113,0,0" TextWrapping="NoWrap" Text="Tetris" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="10,134,0,0" TextWrapping="NoWrap" Text="Perfect Clear" VerticalAlignment="Top"/>
+					<TextBlock HorizontalAlignment="Left" Margin="9,155,0,0" TextWrapping="NoWrap" Text="REN" VerticalAlignment="Top"/>
+					<TextBox x:Name="TSMS" HorizontalAlignment="Left" Margin="166,6,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox x:Name="TSMD" HorizontalAlignment="Left" Margin="166,27,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox x:Name="TSS" HorizontalAlignment="Left" Margin="166,48,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox x:Name="TSD" HorizontalAlignment="Left" Margin="166,69,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox x:Name="TST" HorizontalAlignment="Left" Margin="166,0,0,0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="68"/>
+					<TextBox x:Name="Tetris" HorizontalAlignment="Left" Margin="166,112,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox x:Name="PC" HorizontalAlignment="Left" Margin="166,133,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="68"/>
+					<TextBox x:Name="REN" HorizontalAlignment="Left" Margin="166,154,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="68"/>
 				</Grid>
 			</GroupBox>
 		</UniformGrid>
 
 		<GroupBox Header="フィールド情報" VerticalAlignment="Top" Margin="10,0,10,0">
 			<StackPanel>
-				<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-					<local:Field />
-					<local:Field />
+				<StackPanel  Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+					<local:Field x:Name="Field" />
+					<local:Field  x:Name="FieldHint"/>
 				</StackPanel>
 
 				<Button x:Name="BtnFieldEdit" Content="編集" Height="20" Margin="0,10,5,5" Click="BtnFieldEdit_Click"/>
 			</StackPanel>
 		</GroupBox>
 		<UniformGrid Columns="2">
-			<Button Content="読み込み"  VerticalAlignment="Top" Height="36" Margin="10,10,10,0"/>
-			<Button Content="出力"  VerticalAlignment="Top" Height="36" Margin="10,10,10,10"/>
+			<Button x:Name="BtnLoad" Content="読み込み"  VerticalAlignment="Top" Height="36" Margin="10,10,10,0" Click="BtnLoad_Click" IsEnabled="False"/>
+			<Button x:Name="BtnOutput" Content="出力"  VerticalAlignment="Top" Height="36" Margin="10,10,10,10" Click="BtnOutput_Click"/>
 		</UniformGrid>
 
 	</StackPanel>

@@ -31,7 +31,7 @@ namespace FumenTSD.UserControls
 		{
 			InitializeComponent();
 
-			AddMino();
+			//AddMino('a');
 		}
 
 		private void InitializeMinoImages()
@@ -39,10 +39,10 @@ namespace FumenTSD.UserControls
 
 		}
 
-		public void AddMino()
+		public void AddMino(char mino)
 		{
 			Image image = new Image();
-			image.Source = Util.CreateMinoBitmapFrame(0);
+			image.Source = Util.CreateMinoBitmapFrame(mino, 10);
 
 			image.Height = 20;
 			MinoContainer.Children.Add(image);

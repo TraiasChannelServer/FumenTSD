@@ -6,30 +6,55 @@
         xmlns:local="clr-namespace:FumenTSD.Windows"
         xmlns:UserControls="clr-namespace:FumenTSD.UserControls" x:Class="FumenTSD.Windows.EditField"
         mc:Ignorable="d"
-        Title="FieldEdit" Height="360" Width="560" ResizeMode="NoResize">
+        Title="フィールド編集" Height="456" Width="560" ResizeMode="NoResize">
 	<StackPanel >
-		<GroupBox Header="パネル" Margin="10,0,10,10" Height="114">
-			<Grid>
-				<UniformGrid Columns="3" Margin="0,0,247,0" Height="36" VerticalAlignment="Top">
-					<RadioButton Content="盤面" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-					<RadioButton Content="ネクスト" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-					<RadioButton Content="ホールド" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-				</UniformGrid>
-				<UniformGrid Margin="0,46,0,0" Height="45" VerticalAlignment="Top">
-					<UniformGrid.Background>
-						<ImageBrush/>
-					</UniformGrid.Background>
-					<Button x:Name="test"></Button>
-				</UniformGrid>
-			</Grid>
+		<GroupBox Header="パネル" Margin="10,0,10,0" Height="Auto">
+			<TabControl Height="100">
+				<TabItem Header="フィールド">
+					<UniformGrid x:Name="FieldContainer" Height="68" VerticalAlignment="Top">
+						<Button Background="{x:Null}" Content="Empty" ></Button>
+					</UniformGrid>
+				</TabItem>
+				<TabItem Header="ネクスト">
+					<UniformGrid x:Name="NextContainer" Height="68" VerticalAlignment="Top">
+						<Button x:Name="Next_" Click="ModifyNext_Click" Background="{x:Null}" Content="1つ削除" ></Button>
+					</UniformGrid>
+				</TabItem>
+				<TabItem Header="ホールド">
+					<UniformGrid x:Name="HoldContainer" Height="68" VerticalAlignment="Top">
+						<Button x:Name="Hold_" Click="ModifyHold_Click" Background="{x:Null}" Content="Empty" ></Button>
+					</UniformGrid>
+				</TabItem>
+				<TabItem Header="カレント">
+					<UniformGrid x:Name="CurrentContainer" Height="68" VerticalAlignment="Top">
+						<Button x:Name="Current_" Click="ModifyCurrent_Click" Background="{x:Null}" Content="Empty" ></Button>
+					</UniformGrid>
+				</TabItem>
+			</TabControl>
 		</GroupBox>
+		<GroupBox  Header="テト譜" Margin="10,0,10,10">
+			<StackPanel Orientation="Vertical">
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+					<Label Content="URL" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+					<TextBox x:Name="TxtBoxFumenURL"  TextWrapping="NoWrap" Text="" VerticalAlignment="Center" Width="404" />
+					<Label Content="ページ" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+					<TextBox x:Name="TxtBoxFumenPage"  TextWrapping="NoWrap" Text="1" VerticalAlignment="Center" Width="28" Margin="0,0,5,0" />
+				</StackPanel>
+				<Button x:Name="BtnLoadFumen" Content="読み込み" Margin="10,0,10,0" Click="BtnLoadFumen_Click"></Button>
+			</StackPanel>
+		</GroupBox>
+		<StackPanel Orientation="Horizontal" Margin="10,0,10,10" HorizontalAlignment="Center">
+			<RadioButton x:Name="RadioBtnAppyToField" Content="盤面" VerticalContentAlignment="Center" IsChecked="True" GroupName="FumenToApply" Margin="0,0,10,0"/>
+			<RadioButton x:Name="RadioBtnAppyToHintField" Content="ヒント用盤面" VerticalContentAlignment="Center" GroupName="FumenToApply"/>
+		</StackPanel>
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 			<UserControls:Field x:Name="Field"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="252"/>
-			<UserControls:Field x:Name="FieldHint" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+			<UserControls:Field x:Name="FieldHint" HorizontalAlignment="Left"  VerticalAlignment="Top" />
 
 		</StackPanel>
 
-		<Button Content="適用"   VerticalAlignment="Top" Height="32" Margin="10,0,10,0"/>
+		<Button x:Name="BtnApply" Content="適用"   VerticalAlignment="Top" Height="32" Margin="10,10,10,0" Click="BtnApply_Click"/>
+
 
 	</StackPanel>
 </Window>
